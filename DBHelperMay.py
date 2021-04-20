@@ -111,7 +111,7 @@ class DBHelper(EWrapper, EClient):
 
         try:
             connection = self.getDBConnection()
-            sql_select_query = """SELECT * FROM tick_377 """
+            sql_select_query = """SELECT * FROM tick_by_tick_all_last """
 
             cursor = connection.cursor(prepared=True)
             cursor.execute(sql_select_query)
