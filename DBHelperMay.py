@@ -57,8 +57,8 @@ class DBHelper(EWrapper, EClient):
 
         try:
             connection = self.getDBConnection()
-            mySql_insert_query = """INSERT INTO tick_by_tick_all_last (ticker_id, ticker_name, transaction_id, time, price, tick_size, other_attributes) 
-                                   VALUES (%s, %s, %s, %s, %s, %s, %s) """
+            mySql_insert_query = """INSERT INTO tick_by_tick_all_last (ticker_id, ticker_name, security, transaction_id, time, price, tick_size, other_attributes) 
+                                   VALUES (%s, %s, %s, %s, %s, %s, %s, %s) """
 
             cursor = connection.cursor(prepared=True)
             cursor.execute(mySql_insert_query, values)
