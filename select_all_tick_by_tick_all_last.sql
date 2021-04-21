@@ -1,0 +1,1 @@
+SELECT * FROM javeddb.tick_by_tick_all_last;

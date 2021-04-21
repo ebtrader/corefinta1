@@ -1,0 +1,4 @@
+(MainThread) 210421_10:32:44.233 ERROR wrapper.py:56 ERROR -1 2104 Market data farm connection is OK:usfarm
+(MainThread) 210421_10:32:44.233 ERROR wrapper.py:56 ERROR -1 2158 Sec-def data farm connection is OK:secdefnj
+(MainThread) 210421_10:32:44.297 ERROR wrapper.py:56 ERROR -1 2119 Market data farm is connecting:usopt
+(MainThread) 210421_10:32:44.601 ERROR wrapper.py:56 ERROR -1 2104 Market data farm connection is OK:usopt
