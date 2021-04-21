@@ -183,7 +183,7 @@ class ContractSamples:
         contract.exchange = "SMART"
         contract.currency = "USD"
         contract.lastTradeDateOrContractMonth = "20210423"
-        contract.strike = 336
+        contract.strike = 337
         contract.right = "C"
         contract.multiplier = "100"
         #! [optcontract_us]

@@ -27,15 +27,15 @@ class GooseIndicator(EWrapper, EClient):
         super().__init__()
         EWrapper.__init__(self)
         EClient.__init__(self, wrapper=self)
-        self.nextValidOrderId = None
-        self.simplePlaceOid = None
-        self.connState = None
-        self.conn = None
+        #self.nextValidOrderId = None
+        #self.simplePlaceOid = None
+        #self.connState = None
+        #self.conn = None
 
 
-    def nextOrderId(self):
-        oid = self.nextValidOrderId
-        return oid
+    #def nextOrderId(self):
+    #    oid = self.nextValidOrderId
+    #    return oid
 
     def deriveIndicatorAndPlaceOrder(self):
         #global tick_freq_inp
