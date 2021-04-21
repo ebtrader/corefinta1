@@ -27,7 +27,7 @@ from ibapi.common import *  # @UnusedWildImport
 from ibapi.order import *  # @UnusedWildImport
 from DBHelperMay import DBHelper
 
-contract_type = ContractSamples.USStock()
+contract_type = ContractSamples.SimpleFuture()
 
 def SetupLogger():
     if not os.path.exists("log"):
@@ -223,7 +223,7 @@ class TestApp(EWrapper, EClient):
             print("AllLast.", end='')
         print(" ReqId:", reqId,
               "Time:", datetime.datetime.fromtimestamp(time).strftime("%Y%m%d %H:%M:%S"),
-              "Ticker", contract.symbol, "SecType:", contract.secType, "Price:", price, "Size:", size, tickAttribLast.unreported)
+              "Ticker", contract.symbol, "SecType:", contract.secType, "Price:", price, "Size:", size)
         self.persistData(reqId, time, price,
                          size, tickAttribLast)
 
@@ -231,8 +231,8 @@ class TestApp(EWrapper, EClient):
                           size: int, tickAttribLast: TickAttribLast):
         #print(" inside persistData")
         contract = ContractSamples.USStock()
-
-        values = (1,contract.symbol, contract.secType, reqId, time, price, size, tickAttribLast.__str__())
+        converted_time = datetime.datetime.fromtimestamp(time).strftime("%Y%m%d %H:%M:%S")
+        values = (1,contract.symbol, contract.secType, reqId, time, price, size)
         db = DBHelper()
         db.insertData(values)
 
