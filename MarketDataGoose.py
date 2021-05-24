@@ -25,7 +25,7 @@ from ibapi.wrapper import EWrapper
 # types
 from ibapi.common import *  # @UnusedWildImport
 from ibapi.order import *  # @UnusedWildImport
-from DBHelperMay import DBHelper
+from DBHelper import DBHelper
 
 
 def SetupLogger():
@@ -230,7 +230,7 @@ class TestApp(EWrapper, EClient):
                           size: int, tickAttribLast: TickAttribLast):
         #print(" inside persistData")
         contract = ContractSamples.SimpleFuture()
-        values = (1,contract.symbol, reqId, time, price, size, tickAttribLast.__str__())
+        values = (1,contract.symbol, reqId, time, price, size)
         db = DBHelper()
         db.insertData(values)
 

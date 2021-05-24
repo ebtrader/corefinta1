@@ -61,6 +61,7 @@ class GooseIndicator(EWrapper, EClient):
 
         df = db.getDataInPandaDF()
         print(df)
+        df.to_csv('SQL_Streaming.csv')
 
 
 def main():
