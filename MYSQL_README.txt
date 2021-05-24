@@ -15,3 +15,7 @@ Choose the password option on the bottom for legacy
 type a regular password that you will use in DBHelper to access the servers
 
 remember to change client ID when doing more than one ticker
+
+upload dump file in Server\Data Import 
+
+go to Schema to see new Schema (down below tabs)
