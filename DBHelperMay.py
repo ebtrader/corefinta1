@@ -34,7 +34,7 @@ class DBHelper(EWrapper, EClient):
             connection = mysql.connector.connect(host='localhost',
                                                  database='javeddb',
                                                  user='root',
-                                                 password='suite203',
+                                                 password='',
                                                  auth_plugin='mysql_native_password')
 
             #print("Connection Established with DB")
